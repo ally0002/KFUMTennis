@@ -1,6 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
@@ -10,7 +9,7 @@ import thumbsup from "../assets/images/thumbsup.png";
   <!-- Herosection -->
   <section class="hero h-screen w-full relative">
     <div class="relative w-screen h-screen">
-      <img src="/public/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
+      <img src="public/public/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
       <h2 class="absolute top-4 left-4 text-white text-3xl font-bold drop-shadow-lg">Bliv en del af fællesskabet</h2>
       <div class="absolute inset-0 flex items-center justify-center"></div>
     </div>
@@ -36,24 +35,76 @@ import thumbsup from "../assets/images/thumbsup.png";
       <!-- ... fortsæt indtil 50 (eller kopier linjerne) -->
     </div>
   </section>
-  <!-- Holdinformation: responsive 2x2 grid on md+, stacked on mobile -->
-  <section class="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-4 my-8">
-    <div class="w-full h-48 md:h-56 overflow-hidden rounded-md shadow-sm">
-      <img src="public/ladiesinde.png" alt="Image 1" class="object-cover w-full h-full" />
+  <!-- Holdinformation: 2 rows x 5 columns grid -->
+  <section class="max-w-5xl mx-auto grid grid-cols-5 grid-rows-2 gap-4 my-8">
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <img src="public/Ladiesinde.png" alt="Ladies" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
-    <div class="w-full h-48 md:h-56 overflow-hidden rounded-md shadow-sm">
-      <img src="public/u25inde.png" alt="Image 2" class="object-cover w-full h-full" />
-    </div>
-    <div class="w-full h-48 md:h-56 overflow-hidden rounded-md shadow-sm">
-      <div class="relative w-fit group">
-        <img src="public/vokseinde.png" class="w-full" />
 
-        <!-- overlay -->
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300"></div>
-      </div>
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <img src="public/u25inde.png" alt="U25" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
-    <div class="w-full h-48 md:h-56 overflow-hidden rounded-md shadow-sm">
-      <img src="/110film-7.jpg" alt="Image 4" class="object-cover w-full h-full" />
+
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
+
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
+    </div>
+
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
+    </div>
+
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
+    </div>
+
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
+    </div>
+
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
+    </div>
+
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
+    </div>
+
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
+    </div>
+  </section>
+  <!-- Nyheder -->
+  <section>
+    <h2>Nyheder</h2>
+
+    <button class="px-8 py-4 bg-info text-primary-content border-0
+               rounded-tl-[300px] rounded-br-[300px]
+               cursor-pointer"> Læs mere om priser </button>
+  </section>
+  <!-- Tennissportens dag -->
+  <section class="my-16 max-w-4xl mx-auto p-8 border-30 bg-base-400 shadow-sm rounded-[30px]">
+    <h2>Tennissportens dag 2026</h2>
+
+    <p>
+      Tennissportens Dag er en dag for alle.Alle der spiller tennis, alle der kunne tænke sig at spille tennis og alle der interesserer sig for tennis.Der er ingen tilmelding til arrangementet, men tennisklubben byder i løbet af dagen på forskellige aktiviteter på anlægget på Nøkkerosevej 23.Dato: Lørdag d. 3.maj 2025 (2026 dato kendes ikke endnu)Tidspunkt: 10.00 – 13.00Dagens programIntroduktion til KFUM Tennis – ved Bestyrelsen og SportschefMulighed for at prøve banerne – og se faciliteterne KFUM Tennis byder i år børn U/12år velkomne, med minitennis – juniortennis – familietennis.Vi har desværre venteliste for seniormedlemmer, og forventer ikke at ta’ nye ind Kaffe og kage nye medlemmer og potentielle medlemmer Følg med på klubbens hjemmeside og de sociale medier for mere løbende
+      information…
+    </p>
+    <button class="px-8 py-4 bg-base-200 text-base-100 border-0
+               rounded-tl-[300px] rounded-br-[300px]
+               cursor-pointer"> Læs mere</button>
   </section>
 </MainLayout>
