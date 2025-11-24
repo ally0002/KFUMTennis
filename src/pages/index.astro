@@ -7,11 +7,53 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel" data-theme:tennis>
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={thumbsup} alt="" />
-  </article>
-</MainLayout>
+  <!-- Herosection -->
+  <section class="hero h-screen w-full relative">
+    <div class="relative w-screen h-screen">
+      <img src="/public/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
+      <h2 class="absolute top-4 left-4 text-white text-3xl font-bold drop-shadow-lg">Bliv en del af fællesskabet</h2>
+      <div class="absolute inset-0 flex items-center justify-center"></div>
+    </div>
+  </section>
+  <!-- Prisliste -->
+  <h4>KATEGORI ALDER KONTIGENT STARTGEBYR RETTIGHEDER</h4>
+  <section class="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-4 my-8">
+    <div class="w-full h-48 md:h-56 overflow-hidden border-30 border-amber-300 shadow-sm">
+      <!-- 50 felter (10x5) -->
 
+      <div class="bg-gray-200 p-4">Senior - fuldtidsspiller</div>
+      <div class="bg-gray-200 p-4">Senior - fuldtidsspiller</div>
+      <div class="bg-gray-200 p-4">3</div>
+      <div class="bg-gray-200 p-4">4</div>
+      <div class="bg-gray-200 p-4">5</div>
+
+      <div class="bg-gray-200 p-4">6</div>
+      <div class="bg-gray-200 p-4">7</div>
+      <div class="bg-gray-200 p-4">8</div>
+      <div class="bg-gray-200 p-4">9</div>
+      <div class="bg-gray-200 p-4">10</div>
+
+      <!-- ... fortsæt indtil 50 (eller kopier linjerne) -->
+    </div>
+  </section>
+  <!-- Holdinformation: responsive 2x2 grid on md+, stacked on mobile -->
+  <section class="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-4 my-8">
+    <div class="w-full h-48 md:h-56 overflow-hidden rounded-md shadow-sm">
+      <img src="public/ladiesinde.png" alt="Image 1" class="object-cover w-full h-full" />
+    </div>
+    <div class="w-full h-48 md:h-56 overflow-hidden rounded-md shadow-sm">
+      <img src="public/u25inde.png" alt="Image 2" class="object-cover w-full h-full" />
+    </div>
+    <div class="w-full h-48 md:h-56 overflow-hidden rounded-md shadow-sm">
+      <div class="relative w-fit group">
+        <img src="public/vokseinde.png" class="w-full" />
+
+        <!-- overlay -->
+        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300"></div>
+      </div>
+    </div>
+    <div class="w-full h-48 md:h-56 overflow-hidden rounded-md shadow-sm">
+      <img src="/110film-7.jpg" alt="Image 4" class="object-cover w-full h-full" />
+    </div>
+  </section>
+</MainLayout>
