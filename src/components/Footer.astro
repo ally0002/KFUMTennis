@@ -1,6 +1,107 @@
 ---
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
-</div>
-  
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-col">
+            <img class="footer-logo" src="/images/logo.png" alt="Site logo — replace /images/logo.png with your image path" />
+            <p>KFUM Tennis — Kort beskrivelse af klubben. Tilføj åbningstider eller kort tekst her.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="/about">Om os</a></li>
+                <li><a href="/events">Arrangementer</a></li>
+                <li><a href="/membership">Medlemskab</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Kontakt</h4>
+            <address>
+                KFUM Tennis<br />
+                Eksempelvej 1<br />
+                1234 By<br />
+                <a href="mailto:info@example.com">info@example.com</a><br />
+                <a href="tel:+4512345678">+45 12 34 56 78</a>
+            </address>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <small>© {new Date().getFullYear()} KFUM Tennis. Alle rettigheder forbeholdes.</small>
+    </div>
+</footer>
+
+<style>
+    .site-footer {
+        background: #0f1724;
+        color: #e6eef8;
+        padding: 2rem 1rem;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .footer-col {
+        flex: 1 1 220px;
+        min-width: 200px;
+    }
+
+    .footer-logo {
+        width: 120px;
+        height: auto;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-col h4 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.05rem;
+    }
+
+    .footer-col p,
+    .footer-col address,
+    .footer-col ul {
+        margin: 0 0 0.75rem 0;
+        line-height: 1.4;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-col a {
+        color: #bfe3ff;
+        text-decoration: none;
+    }
+
+    .footer-col a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.06);
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        text-align: center;
+        color: #94a3b8;
+    }
+
+    @media (max-width: 600px) {
+        .footer-inner {
+            gap: 1rem;
+        }
+        .footer-logo {
+            width: 100px;
+        }
+    }
+</style>
