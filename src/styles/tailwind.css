@@ -8,6 +8,13 @@
   /* Her tilføjes theme variable // tokens */
 }
 
+@plugin "daisyui" {
+  /* Her tilføjes theme variable // tokens */
+  themes:tennis:
+}
+
+
+
 @layer base {
   *,
   ::after,
@@ -24,3 +31,7 @@
 @layer utilities{
   
 }
+
+
+
+
