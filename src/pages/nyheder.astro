@@ -6,14 +6,20 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+
 <MainLayout title="Titel" data-theme:tennis>
   <!-- Herosection -->
   <section class="hero h-screen w-full relative">
     <div class="relative w-screen h-screen">
       <img src="/public/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
       <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
-        <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg">Bliv en del af fællesskabet</h2>
-        <h2 class="text-primary-conten text-3xl font-bold drop-shadow-lg">Tennis for alle</h2>
+        <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg anton-regular">Nyheder</h2>
         <div class="flex gap-4">
           <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Book Tennis bane</button>
           <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Book Padel bane</button>
@@ -21,5 +27,4 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
     </div>
   </section>
- 
 </MainLayout>

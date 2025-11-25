@@ -6,14 +6,21 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+
 <MainLayout title="Titel" data-theme:tennis>
   <!-- Herosection -->
   <section class="hero h-screen w-full relative">
     <div class="relative w-screen h-screen">
       <img src="/public/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
       <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
-        <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg">Bliv en del af fællesskabet</h2>
-        <h2 class="text-primary-conten text-3xl font-bold drop-shadow-lg">Tennis for alle</h2>
+        <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg anton-regular">Bliv en del af fællesskabet</h2>
+        <h2 class="text-primary-conten text-3xl font-bold drop-shadow-lg anton-regular">Tennis for alle</h2>
         <div class="flex gap-4">
           <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Book Tennis bane</button>
           <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Book Padel bane</button>
@@ -23,7 +30,7 @@ import thumbsup from "../assets/images/thumbsup.png";
   </section>
   <!-- Prisliste -->
   <section class="gap-4 my-8 bg-base-300/40">
-    <h2>Priser</h2>
+    <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Priser</h2>
     <p>KONTINGENT 2025 <br />Kontingent betales inden 28.februar 2025 og dækker 2025-sæsonen (1.januar – 31.december 2025).</p>
     <h4>KATEGORI ALDER KONTIGENT STARTGEBYR RETTIGHEDER</h4>
     <div class="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 w-full h-48 md:h-56 overflow-hidden border-30 bg-base-100 shadow-sm rounded-[30px]">
@@ -45,59 +52,66 @@ import thumbsup from "../assets/images/thumbsup.png";
     </div>
   </section>
 
-  <section>
-    <h1>sektion</h1>
+  <!-- SOME -->
+  <section class="max-w-5xl mx-auto grid grid-cols-5 grid-rows-2 gap-4 my-8 bg-base-400">
+    <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
+      <div class="bg-base-400 p-8 rounded-lg">
+        <p>Dette er en grøn baggrund</p>
+      </div>
+      <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Følg den daglige opdatering her!</h2>
+      <p>hey</p>
+    </div>
   </section>
 
   <!-- Holdinformation: 2 rows x 5 columns grid -->
   <section class="max-w-5xl mx-auto grid grid-cols-5 grid-rows-2 gap-4 my-8 bg-base-300/60">
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-      <img src="public/Ladiesinde.png" alt="Ladies" class="w-full h-full object-cover" />
+      <img src="/Ladiesinde.png" alt="Ladies" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
 
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-      <img src="public/u25inde.png" alt="U25" class="w-full h-full object-cover" />
+      <img src="/u25inde.png" alt="U25" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
 
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
 
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
 
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
 
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
 
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
 
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
 
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
 
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-      <img src="public/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
+      <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
     </div>
   </section>
@@ -105,7 +119,7 @@ import thumbsup from "../assets/images/thumbsup.png";
   <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('/public/tennisbanebg.jpg')">
     <div class="absolute inset-0"></div>
     <div class="relative z-10 max-w-4xl mx-auto p-8 text-center text-primary-content">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Nyheder</h2>
+      <h2 class="mb-4 montserrat-700 text-2xl md:text-3xl font-bold">Nyheder</h2>
       <p class="mb-6">Seneste nyt fra klubben — hold dig opdateret.</p>
       <a href="/nyheder">
         <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Læs mere nyheder</button>
@@ -115,7 +129,7 @@ import thumbsup from "../assets/images/thumbsup.png";
   <!-- Tennissportens dag -->
   <section class="h-screen w-screen bg-base-300/80 flex items-center justify-center">
     <div class="max-w-4xl p-8">
-      <h2 class="text-2xl mb-4">Tennissportens dag 2026</h2>
+      <h2 class="text-2xl md:text-3xl mb-4 montserrat-700">Tennissportens dag 2026</h2>
 
       <p class="mb-6">
         Tennissportens Dag er en dag for alle. Alle der spiller tennis, alle der kunne tænke sig at spille tennis og alle der interesserer sig for tennis. Der er ingen tilmelding til arrangementet, men tennisklubben byder i løbet af dagen på forskellige aktiviteter på anlægget på Nøkkerosevej 23. Dato: Lørdag d. 3.maj 2025 (2026 dato kendes ikke endnu) Tidspunkt: 10.00 – 13.00 Dagens program Introduktion til KFUM Tennis – ved Bestyrelsen og Sportschef Mulighed for at prøve banerne – og se faciliteterne KFUM Tennis byder i år børn U/12år velkomne, med minitennis – juniortennis – familietennis. Vi har desværre venteliste for seniormedlemmer, og forventer ikke at ta’ nye ind Kaffe og kage nye medlemmer og potentielle medlemmer Følg med på klubbens hjemmeside og de sociale medier for mere
@@ -129,7 +143,7 @@ import thumbsup from "../assets/images/thumbsup.png";
   <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('/public/tennisbanebg.jpg')">
     <div class="absolute inset-0"></div>
     <div class="relative z-10 max-w-4xl mx-auto p-8 text-center text-primary-content">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Vinterens tilbud</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 montserrat-700">Vinterens tilbud</h2>
       <p class="mb-6">Tag et kig på vores omfangsrige folder</p>
       <a href="https://issuu.com/kfumtennisklub/docs/tr_nings_og_aktivitetskatalog_for_f_rste_termin_20">
         <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Læs mere om tilbuddet</button>
