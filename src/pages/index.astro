@@ -11,11 +11,19 @@ import thumbsup from "../assets/images/thumbsup.png";
   <section class="hero h-screen w-full relative">
     <div class="relative w-screen h-screen">
       <img src="/public/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
-      <h2 class="absolute top-4 left-4 text-white text-3xl font-bold drop-shadow-lg">Bliv en del af fællesskabet</h2>
-      <div class="absolute inset-0 flex items-center justify-center"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
+        <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg">Bliv en del af fællesskabet</h2>
+        <h2 class="text-primary-conten text-3xl font-bold drop-shadow-lg">Tennis for alle</h2>
+        <div class="flex gap-4">
+          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Book Tennis bane</button>
+          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Book Padel bane</button>
+        </div>
+      </div>
     </div>
   </section>
   <!-- Prisliste -->
+  <h2>Priser</h2>
+  <p>KONTINGENT 2025 <br />Kontingent betales inden 28.februar 2025 og dækker 2025-sæsonen (1.januar – 31.december 2025).</p>
   <h4>KATEGORI ALDER KONTIGENT STARTGEBYR RETTIGHEDER</h4>
   <section class="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-4 my-8">
     <div class="w-full h-48 md:h-56 overflow-hidden border-30 border-amber-300 shadow-sm">
@@ -36,6 +44,12 @@ import thumbsup from "../assets/images/thumbsup.png";
       <!-- ... fortsæt indtil 50 (eller kopier linjerne) -->
     </div>
   </section>
+
+  <section>
+<h1>sektion</h1>
+  
+  </section>
+  
   <!-- Holdinformation: 2 rows x 5 columns grid -->
   <section class="max-w-5xl mx-auto grid grid-cols-5 grid-rows-2 gap-4 my-8">
     <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
@@ -89,12 +103,13 @@ import thumbsup from "../assets/images/thumbsup.png";
     </div>
   </section>
   <!-- Nyheder -->
-  <section>
-    <h2>Nyheder</h2>
-
-    <button class="px-8 py-4 bg-info text-primary-content border-0
-               rounded-tl-[300px] rounded-br-[300px]
-               cursor-pointer"> Læs mere om priser </button>
+  <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('/public/tennisbanebg.jpg')">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 max-w-4xl mx-auto p-8 text-center text-primary-content">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Nyheder</h2>
+      <p class="mb-6">Seneste nyt fra klubben — hold dig opdateret.</p>
+      <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Læs mere om priser</button>
+    </div>
   </section>
   <!-- Tennissportens dag -->
   <section class="h-screen w-screen bg-base-400 flex items-center justify-center">
@@ -119,5 +134,5 @@ import thumbsup from "../assets/images/thumbsup.png";
       <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Læs om tilbuddet</button>
     </div>
   </section>
+  
 </MainLayout>
-
