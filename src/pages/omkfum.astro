@@ -13,22 +13,57 @@ import { Image } from "astro:assets";
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
 
 <MainLayout title="Titel" data-theme:tennis>
-  <!-- Herosection -->
+  <!-- Hero Section -->
   <section class="hero h-screen w-full relative">
-    <div class="relative w-screen h-screen">
-      <video width="1080" height="960" autoplay muted loop class="object-cover w-50 h-fullrounded-[30px] border-primary-content">
-        <source src="teninissportensdag.mp4" type="video/mp4" />
-      </video>
-      <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
-        <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg anton-regular">KFUM</h2>
-        <div class="flex gap-4">
-          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Book Tennis bane</button>
-          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Book Padel bane</button>
-        </div>
+    <!-- Video baggrund -->
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+      <source src="teninissportensdag.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Overlay med knapper -->
+    <div class="absolute inset-0 bg-black/40 z-10 flex flex-col items-center justify-center gap-4">
+      <div class="flex gap-4">
+        <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer"> Book Tennis bane </button>
+        <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer"> Book Padel bane </button>
       </div>
     </div>
   </section>
-  <section class="w-full py-12">
-   
+
+  <!-- Om KFUM Section -->
+  <section class="w-screen bg-base-300/40 flex items-start justify-center py-16">
+    <div class="relative w-full max-w-5xl rounded-[30px] flex flex-col gap-8 p-8">
+      <h2 class="montserrat-700 text-2xl md:text-3xl font-bold text-center">Om KFUM</h2>
+      <p>Efter talrige års tennisspil på Emdrupparkens Idrætsanlæg var stiftelsen af KFUMs Tennisklub (nu KFUM Tennis) i 1975 en helt naturlig beslutning. Den stigende interesse for tennissporten resulterede i et øget behov for at kunne dyrke tennis under organiserede former, og i Emdrup og omegn blev KFUM´s Tennisklub det oplagte svar for tennishungrende folk. Det er vi fortsat i dag, hvor vi med vores over 1000 medlemmer må regnes som en af de store klubber i Danmark.</p>
+
+      <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Hvem er vi?</h2>
+      <p>
+        KFUM Tennis er og skal fortsat være en forening med tilbud til alle vores forskellige medlemstyper som juniorer, veteraner, motionister, ambitiøse holdspillere og holdspillere, der mest drages af lidt konkurrence på hyggeplan. Derfor tilbyder vi både juniortræning (meget for de ivrige), holdtræning og motionstræning, ligesom vi afholder klubmesterskaber (for forskellige niveauer), motionsspil og diverse sociale aktiviteter. Vores brede tilgang afspejler sig også i vores deltagelse Dansk Tennis Forbunds holdturnering, hvor vi er repræsenteret i stort set alle rækker. Udover junior- og veteranhold har vi således seniorhold på flere niveauer, fra elite til lavere serier. Selvom vi allerede nu kan tilbyde vores medlemmer tennisformer, der passer netop dem, arbejder vi hele tiden på at
+        udvikle og forbedre vores tilbud. Vi ønsker kort sagt at være en levende klub, som giver liv til tennis i alle afskygninger.
+      </p>
+
+      <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Hvad koster vi?</h2>
+      <p>Økonomi skal ikke afholde mennesker fra at opleve tennissportens livgivende glæder. I KFUM Tennis holdes medlemskontingentet derfor så lavt som muligt, hvilket betyder, at kontingentet ligger i den lavere ende sammenlignet med de øvrige klubber i Storkøbenhavn. Priserne for de forskellige medlemskategorier kan ses på siden priser.</p>
+
+      <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Hvor ligger vi?</h2>
+      <p>KFUM Tennis holder til på Emdrupparkens Idrætsanlæg, som er beliggende på Nøkkerosevej 23 lige ved grænsen mellem København, Gladsaxe og Gentofte kommune. Vi råder over 2 indendørsbaner, 8 grusbaner og deler sammen med de øvrige klubber i Emdrupparken, et klubhus i form af en dejlig villa med dertilhørende have og grillfaciliteter. Emdrupparken er således centrum for livlig aktivitet, hvor man udover tennisspillere også støder på håndboldspillere, fodboldspillere, badmintonspillere og atletikudøvere. Mest liv er der dog på tennisbanerne. Indendørs spilles der i indendørshal med 2 baner etableret i 2021, samt i en multihal, som vi deler med de øvrige sportsklubber på udendørsanlægget. I 2023 blev der opført 2 padelbaner, så foreningen også kan tilbyde padeltennis.</p>
+    </div>
+  </section>
+  <!-- KORT -->
+  <section class="w-screen bg-base-300/40 flex items-start justify-center py-16 lg:p-[200px]">
+    <div class="flex flex-col items-center">
+      <img src="/kortoverkfum.jpg" alt="billede" class="px-[92px]" />
+      <p class="mt-4">Kort over KFUM Tennis anlæg</p>
+    </div>
+  </section>
+  <!-- Vinterens tilbud -->
+  <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden bg-base-300/40" style="">
+    <div class="absolute inset-0"></div>
+    <div class="relative z-10 max-w-4xl mx-auto p-8 text-center text-primary-content">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 montserrat-700">Vinterens tilbud</h2>
+      <p class="mb-6">Tag et kig på vores omfangsrige folder</p>
+      <a href="https://issuu.com/kfumtennisklub/docs/tr_nings_og_aktivitetskatalog_for_f_rste_termin_20">
+        <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer">Læs mere om tilbuddet</button>
+      </a>
+    </div>
   </section>
 </MainLayout>
