@@ -16,7 +16,9 @@ import { Image } from "astro:assets";
   <!-- Herosection -->
   <section class="hero h-screen w-full relative">
     <div class="relative w-screen h-screen">
-      <img src="/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
+      <video width="1080" height="960" autoplay muted loop class="object-cover w-50 h-fullrounded-[30px] border-primary-content">
+        <source src="teninissportensdag.mp4" type="video/mp4" />
+      </video>
       <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
         <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg anton-regular">KFUM</h2>
         <div class="flex gap-4">
@@ -26,8 +28,7 @@ import { Image } from "astro:assets";
       </div>
     </div>
   </section>
-<section class="w-full py-12">
-    
-</section>
- 
+  <section class="w-full py-12">
+   
+  </section>
 </MainLayout>
