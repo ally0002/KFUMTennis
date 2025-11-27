@@ -4,7 +4,8 @@ import Link from "../components/Link.astro";
 import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
-import Accordion from "../components/Accordion.astro";
+import Accordionpriser from "../components/Accordionpriser.astro";
+import Accordiontennissportensdag from "../components/Accordiontennissportensdag.astro";
 ---
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -109,7 +110,7 @@ import Accordion from "../components/Accordion.astro";
         <div class="col-span-5 border-t border-base-content"></div>
         <!-- ... repeat until Cell 50 ... -->
       </div>
-      <Accordion />
+      <Accordionpriser />
     </section>
 
     <!-- SOME -->
@@ -202,6 +203,7 @@ import Accordion from "../components/Accordion.astro";
         <button class="px-8 py-4 bg-base-200 text-base-100 border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer leading-relaxed arial">Læs mere</button>
       </div>
     </section>
+    <Accordiontennissportensdag />
     <!-- Vinterens tilbud -->
     <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('/public/tennisbanebg.jpg')">
       <div class="absolute inset-0"></div>
