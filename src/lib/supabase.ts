@@ -1,0 +1,7 @@
+import { createClient } from "@supabase/supabase-js";
+
+// Hent URL og API-nøgle fra miljøvariabler
+const supabaseUrl = "https://djlewrvgemxgbfkmyfgj.supabase.com";
+const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRqbGV3cnZnZW14Z2Jma215ZmdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQyMzQ0NDgsImV4cCI6MjA3OTgxMDQ0OH0.MS0i7NqjozJtFDWXjJbu52GqUYIuSCodboXH_DfkZro";
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);

@@ -1,0 +1,30 @@
+---
+import Holdoversigtcard from "../components/Holdoversigtcard.astro";
+
+// REST API URL til en specifik række med id = 4
+const url = `${import.meta.env.PUBLIC_SUPABASE_URL}/rest/v1/kfum_tennis_holdoversigt?select=overskrift,tekst&id=eq.4`;
+
+// Hent data fra Supabase
+const holdoversigt = await fetch(url, {
+  method: "GET",
+  headers: {
+    apikey: import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
+    Authorization: `Bearer ${import.meta.env.PUBLIC_SUPABASE_ANON_KEY}`,
+    "Content-Type": "application/json",
+  },
+})
+  .then((res) => res.json())
+  .catch((err) => {
+    console.error("Fejl ved fetch til Supabase:", err);
+    return [];
+  });
+
+// Tag den første (og eneste) række, hvis den findes
+const hold = holdoversigt.length > 0 ? holdoversigt[0] : { overskrift: "Ingen overskrift", tekst: "Ingen tekst" };
+
+console.log("Hold med id=4 fra Supabase:", hold);
+---
+
+<h1>Specifikt hold (id=4)</h1>
+
+<Holdoversigtcard overskrift={hold.overskrift} tekst={hold.tekst} />

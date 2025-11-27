@@ -1,0 +1,22 @@
+---
+export interface Props {
+  overskrift: string;
+  tekst: string;
+}
+
+const { overskrift, tekst } = Astro.props;
+---
+
+<div class="card">
+  <h2>{overskrift}</h2>
+  <p>{tekst}</p>
+</div>
+
+<style>
+  .card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+</style>
