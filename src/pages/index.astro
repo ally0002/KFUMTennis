@@ -36,13 +36,13 @@ import Accordiontennissportensdag from "../components/Accordiontennissportensdag
     </div>
   </section>
   <!-- Prisliste -->
-  <section class="gap-4 my-8 bg-base-300/40">
-    <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Priser</h2>
-    <p class="text-primary-content leading-relaxed arial">KONTINGENT 2025 <br />Kontingent betales inden 28.februar 2025 og dækker 2025-sæsonen (1.januar – 31.december 2025).</p>
-    <h4>KATEGORI ALDER KONTIGENT STARTGEBYR RETTIGHEDER</h4>
+  <section class="gap-4 bg-base-300/40">
+    <h2 class="montserrat-700 text-2xl md:text-3xl font-bold text-center pb-10 pt-40">Priser</h2>
+    <p class="text-primary-content leading-relaxed arial text-center pb-10">KONTINGENT 2025 <br />Kontingent betales inden 28.februar 2025 og dækker 2025-sæsonen (1.januar – 31.december 2025).</p>
+    <h4 class="text-center montserrat-700 font-extralight text-2xl" style="word-spacing: 6rem;">KATEGORI ALDER KONTIGENT STARTGEBYR RETTIGHEDER</h4>
 
     <section class="my-8">
-      <div class="grid grid-rows-10 grid-cols-5 gap-0 p-0 bg-base-100 rounded-[30px] max-w-5xl mx-auto">
+      <div class="grid grid-rows-10 grid-cols-5 gap-0 p-0 bg-base-100 rounded-[30px] max-w-5xl mx-auto border border-primary-content">
         <!-- Generate 10 rows × 5 columns = 50 cells -->
         <!-- You can just repeat this block 50 times -->
         <p class="text-center m-0 text-primary-content leading-relaxed arial">Senior - fuldtidsspiller</p>
@@ -114,11 +114,11 @@ import Accordiontennissportensdag from "../components/Accordiontennissportensdag
     </section>
 
     <!-- SOME -->
-    <section class="w-screen h-screen bg-base-400/40 flex items-center justify-center">
+    <section class="w-screen h-100 bg-base-400/60 flex items-center justify-center rounded-lg border border-primary-content">
       <div class="relative w-full h-full overflow-hidden group rounded-[30px] flex flex-col items-center justify-center gap-8 p-8">
         <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Følg den daglige opdatering her!</h2>
 
-        <div class="flex flex-row gap-4 bg-base-100 p-4 rounded-lg">
+        <div class="flex flex-row h-50 bg-base-100 p-20 rounded-lg border border-primary-content space-x-30">
           <img src="/Facebook.png" alt="SOME" class="w-12 h-12" />
           <img src="/Instagram.png" alt="SOME" class="w-12 h-12" />
           <img src="/twitter.png" alt="SOME" class="w-12 h-12" />
@@ -180,38 +180,27 @@ import Accordiontennissportensdag from "../components/Accordiontennissportensdag
       </div>
     </section>
     <!-- Nyheder -->
-    <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('/public/tennisbanebg.jpg')">
+    <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden border border-primary-content rounded-lg pt-15" style="background-image: url('/public/tennisbanebg.jpg')">
       <div class="absolute inset-0"></div>
       <div class="relative z-10 max-w-4xl mx-auto p-8 text-center text-primary-content">
         <h2 class="mb-4 montserrat-700 text-2xl md:text-3xl font-bold">Nyheder</h2>
         <p class="mb-6 leading-relaxed arial">Seneste nyt fra klubben — hold dig opdateret.</p>
         <a href="/nyheder">
-          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer leading-relaxed arial">Læs mere nyheder</button>
+          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer leading-relaxed montserrat font-bold">Læs mere nyheder</button>
         </a>
       </div>
     </section>
     <!-- Tennissportens dag -->
-    <section class="h-screen w-screen bg-base-300/80 flex items-center justify-center">
-      <div class="max-w-4xl p-8">
-        <h2 class="text-2xl md:text-3xl mb-4 montserrat-700">Tennissportens dag 2026</h2>
-
-        <p class="mb-6 text-primary-content leading-relaxed arial">
-          Tennissportens Dag er en dag for alle. Alle der spiller tennis, alle der kunne tænke sig at spille tennis og alle der interesserer sig for tennis. Der er ingen tilmelding til arrangementet, men tennisklubben byder i løbet af dagen på forskellige aktiviteter på anlægget på Nøkkerosevej 23. Dato: Lørdag d. 3.maj 2025 (2026 dato kendes ikke endnu) Tidspunkt: 10.00 – 13.00 Dagens program Introduktion til KFUM Tennis – ved Bestyrelsen og Sportschef Mulighed for at prøve banerne – og se faciliteterne KFUM Tennis byder i år børn U/12år velkomne, med minitennis – juniortennis – familietennis. Vi har desværre venteliste for seniormedlemmer, og forventer ikke at ta’ nye ind Kaffe og kage nye medlemmer og potentielle medlemmer Følg med på klubbens hjemmeside og de sociale medier for mere
-          løbende information…
-        </p>
-
-        <button class="px-8 py-4 bg-base-200 text-base-100 border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer leading-relaxed arial">Læs mere</button>
-      </div>
-    </section>
+   
     <Accordiontennissportensdag />
     <!-- Vinterens tilbud -->
-    <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('/public/tennisbanebg.jpg')">
+    <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden border border-primary-content rounded-lg pt-15" style="background-image: url('/public/tennisbanebg.jpg')">
       <div class="absolute inset-0"></div>
       <div class="relative z-10 max-w-4xl mx-auto p-8 text-center text-primary-content">
         <h2 class="text-2xl md:text-3xl font-bold mb-4 montserrat-700">Vinterens tilbud</h2>
         <p class="mb-6 text-primary-content leading-relaxed arial">Tag et kig på vores omfangsrige folder</p>
         <a href="https://issuu.com/kfumtennisklub/docs/tr_nings_og_aktivitetskatalog_for_f_rste_termin_20">
-          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer leading-relaxed arial">Læs mere om tilbuddet</button>
+          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer leading-relaxed montserrat font-bold">Læs mere om tilbuddet</button>
         </a>
       </div>
     </section>

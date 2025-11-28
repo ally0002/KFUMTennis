@@ -1,0 +1,53 @@
+<section class="w-full max-w-5xl mx-auto p-8">
+ 
+
+  <!-- Filter Buttons -->
+  <div class="flex gap-4 mb-6">
+    <button class="filter-btn px-10 py-4 bg-primary-content text-info border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer leading-relaxed montserrat font-bold" data-filter="alle">Alle</button>
+    <button class="filter-btn px-10 py-4 bg-primary-content text-info border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer leading-relaxed montserrat font-bold" data-filter="aktiviteter">Aktiviteter</button>
+    <button class="filter-btn px-10 py-4 bg-primary-content text-info border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer leading-relaxed montserrat font-bold" data-filter="bestyrelsen">Bestyrelsen</button>
+  </div>
+
+  <!-- Content Items -->
+  <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+    <div class="filter-item bg-base-100 border border-primary-content p-6 rounded-lg" data-category="aktiviteter">
+      <h3 class="montserrat-700 text-xl mb-2">Aktivitet 1</h3>
+      <p class="text-primary-content arial">Beskrivelse af aktivitet 1.</p>
+    </div>
+    <div class="filter-item bg-base-100 border border-primary-content p-6 rounded-lg" data-category="bestyrelsen">
+      <h3 class="montserrat-700 text-xl mb-2">Bestyrelsesmedlem 1</h3>
+      <p class="text-primary-content arial">Beskrivelse af bestyrelsesmedlem 1.</p>
+    </div>
+    <div class="filter-item bg-base-100 border border-primary-content p-6 rounded-lg" data-category="aktiviteter">
+      <h3 class="montserrat-700 text-xl mb-2">Aktivitet 2</h3>
+      <p class="text-primary-content arial">Beskrivelse af aktivitet 2.</p>
+    </div>
+    <div class="filter-item bg-base-100 border border-primary-content p-6 rounded-lg" data-category="bestyrelsen">
+      <h3 class="montserrat-700 text-xl mb-2">Bestyrelsesmedlem 2</h3>
+      <p class="text-primary-content arial">Beskrivelse af bestyrelsesmedlem 2.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const buttons = document.querySelectorAll(".filter-btn");
+  const items = document.querySelectorAll(".filter-item");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.getAttribute("data-filter");
+
+      items.forEach((item) => {
+        if (filter === "alle") {
+          item.style.display = "block";
+        } else {
+          item.style.display = item.getAttribute("data-category") === filter ? "block" : "none";
+        }
+      });
+
+      // Optional: Highlight active button
+      buttons.forEach((b) => b.classList.remove("bg-primary-content", "text-base-100"));
+      btn.classList.add("bg-primary-content", "text-base-100");
+    });
+  });
+</script>
