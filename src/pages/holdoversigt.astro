@@ -1,30 +1,172 @@
 ---
-import Holdoversigtcard from "../components/Holdoversigtcard.astro";
-
-// REST API URL til en specifik række med id = 4
-const url = `${import.meta.env.PUBLIC_SUPABASE_URL}/rest/v1/kfum_tennis_holdoversigt?select=overskrift,tekst&id=eq.4`;
-
-// Hent data fra Supabase
-const holdoversigt = await fetch(url, {
-  method: "GET",
-  headers: {
-    apikey: import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
-    Authorization: `Bearer ${import.meta.env.PUBLIC_SUPABASE_ANON_KEY}`,
-    "Content-Type": "application/json",
-  },
-})
-  .then((res) => res.json())
-  .catch((err) => {
-    console.error("Fejl ved fetch til Supabase:", err);
-    return [];
-  });
-
-// Tag den første (og eneste) række, hvis den findes
-const hold = holdoversigt.length > 0 ? holdoversigt[0] : { overskrift: "Ingen overskrift", tekst: "Ingen tekst" };
-
-console.log("Hold med id=4 fra Supabase:", hold);
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+import thumbsup from "../assets/images/thumbsup.png";
 ---
 
-<h1>Specifikt hold (id=4)</h1>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
 
-<Holdoversigtcard overskrift={hold.overskrift} tekst={hold.tekst} />
+<MainLayout title="Titel" data-theme:tennis>
+  <!-- Herosection -->
+  <section class="hero h-screen w-full relative">
+    <div class="relative w-screen h-screen">
+      <img src="/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
+      <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
+        <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg anton-regular">Mens club inde</h2>
+        <div class="flex gap-4">
+          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer montserrat-700 font-bold">Book Tennis bane</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Holdinformation -->
+  <section class="gap-4 bg-base-300/40">
+    <div class="max-w-5xl mx-auto p-40">
+      <h2 class="montserrat-700 text-2xl md:text-3xl font-bold text-center">Hold</h2>
+      <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Mens Club fortsætter indendørs i 2025/2026.</h2>
+
+      <p class="text-primary-content leading-relaxed arial">
+        Træningsholdet henvender sig til spillere der er lige udenfor Seniorholdtræningen. I princippet bliver man “udtaget” til træningen, for at opretholde niveauet. <br /> Træningen vil i lighed med tidligere være personligt funderet, og omhandler teknik, taktik, og meget mere. Vi træner hver søndag kl. 10.00 - 11.00.
+      </p>
+      <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Yderligere information</h2>
+      <p class="text-primary-content leading-relaxed arial">Spørgsmål omkring Mens Club bedes rettes til:</p>
+      <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Sportschef</h2>
+      <p class="text-primary-content leading-relaxed arial">Thomas Skouboe <br /> 20 87 77 81 <br />thomas@kfum-tennis.dk</p>
+    </div>
+  </section>
+
+  <!-- ACCORDION 1 -->
+  <div class="accordion-group w-full max-w-3xl mx-auto mb-6">
+    <!-- Accordion header -->
+    <div class="accordion-trigger flex items-center justify-between bg-base-100 p-4 cursor-pointer">
+      <span class="montserrat-700">Terminer:</span>
+      <img src="/pil.png" class="w-6 h-6 transition-transform duration-300" />
+    </div>
+
+    <!-- Border line under header -->
+    <div class="w-full border-b border-primary-content"></div>
+
+    <!-- Accordion panel -->
+    <div class="accordion-panel bg-base-100 p-4 hidden">
+      <p class="leading-relaxed text-primary-content mb-4 arial">Termin 01 fra 29.september 2025 - 18.januar 2026. <br />Termin 02 fra 19.januar 2026 - 26.april 2026.</p>
+    </div>
+
+    <!-- Border under content -->
+    <div class="w-full border-b border-primary-content"></div>
+  </div>
+
+  <!-- ACCORDION 2 -->
+  <div class="accordion-group w-full max-w-3xl mx-auto mb-6">
+    <!-- Accordion header -->
+    <div class="accordion-trigger flex items-center justify-between bg-base-100 p-4 cursor-pointer">
+      <span class="montserrat-700">Hvornår:</span>
+      <img src="/pil.png" class="w-6 h-6 transition-transform duration-300" />
+    </div>
+
+    <!-- Border line under header -->
+    <div class="w-full border-b border-primary-content"></div>
+
+    <!-- Accordion panel -->
+    <div class="accordion-panel bg-base-100 p-4 hidden">
+      <p class="leading-relaxed text-primary-content mb-4 arial">Termin 01 - Søndage kl. 10.00 - 11.00 <br /> Træningen begynder søndag d.5.oktober 2025. <br />Der er ingen træning i uge 42, i juleferien, samt i uge 7 og påskeferien.</p>
+    </div>
+
+    <!-- Border under content -->
+    <div class="w-full border-b border-primary-content"></div>
+  </div>
+
+  <!-- ACCORDION 3 -->
+  <div class="accordion-group w-full max-w-3xl mx-auto mb-6">
+    <!-- Accordion header -->
+    <div class="accordion-trigger flex items-center justify-between bg-base-100 p-4 cursor-pointer">
+      <span class="montserrat-700">Hvor:</span>
+      <img src="/pil.png" class="w-6 h-6 transition-transform duration-300" />
+    </div>
+
+    <!-- Border line under header -->
+    <div class="w-full border-b border-primary-content"></div>
+
+    <!-- Accordion panel -->
+    <div class="accordion-panel bg-base-100 p-4 hidden">
+      <p class="leading-relaxed text-primary-content mb-4 arial"><br /> KFUM Tennis Hal, Nøkkerosevej 23, 2400 København NV.</p>
+    </div>
+
+    <!-- Border under content -->
+    <div class="w-full border-b border-primary-content"></div>
+  </div>
+
+  <!-- ACCORDION 4 -->
+  <div class="accordion-group w-full max-w-3xl mx-auto mb-6">
+    <!-- Accordion header -->
+    <div class="accordion-trigger flex items-center justify-between bg-base-100 p-4 cursor-pointer">
+      <span class="montserrat-700">Program:</span>
+      <img src="/pil.png" class="w-6 h-6 transition-transform duration-300" />
+    </div>
+
+    <!-- Border line under header -->
+    <div class="w-full border-b border-primary-content"></div>
+
+    <!-- Accordion panel -->
+    <p class="leading-relaxed text-primary-content mb-4 arial">
+      <a href="https://docs.google.com/spreadsheets/d/1AbFO8hTW8QbmRNlpFFW3gGGt2n8o5IGYUz_PLOmA41I/edit?gid=796099703#gid=796099703" class="underline hover:text-base-300 block"> Mens Club Termin 01 </a>
+
+      <a href="" class="underline hover:text-base-300 block"> Mens Club Termin 02 </a>
+
+      <a href="https://usercontent.one/wp/www.kfum-tennis.dk/wp-content/uploads/2023/09/Opvarmning2023.pdf?media=1764238159" class="underline hover:text-base-300 block"> Opvarmningsprogram </a>
+    </p>
+
+    <!-- Border under content -->
+    <div class="w-full border-b border-primary-content"></div>
+  </div>
+  <!-- ACCORDION 5 -->
+  <div class="accordion-group w-full max-w-3xl mx-auto mb-6">
+    <!-- Accordion trigger -->
+    <div class="accordion-trigger flex items-center justify-between bg-base-100 p-4 cursor-pointer">
+      <span class="montserrat-700">Tilmelding:</span>
+      <img src="/pil.png" class="arrow w-6 h-6 transition-transform duration-300" />
+    </div>
+
+    <!-- Bottom border under header -->
+    <div class="w-full border-b border-primary-content"></div>
+
+    <!-- Hidden accordion content wrapper -->
+    <div class="accordion-panel hidden">
+      <p class="leading-relaxed text-primary-content mb-2 arial">
+        <a href="https://docs.google.com/forms/d/1Ni6V3jhAJ1htNPAOITBvW-qsOu77C2bWwFUvu58WExY/viewform?edit_requested=true" class="underline hover:text-base-300 block"> Tilmelding via Mens Club tilmelding Googleark </a>
+      </p>
+
+      <p class="leading-relaxed text-primary-content mb-4 arial">
+        Tilmeldingen vil være efter først til mølle-princippet. <br />
+        Senest tilmelding er mandag d. 15. september 2025. <br />
+        Tilmeldingen er bindende. <br />
+        Send din tilmelding til: thomas@kfum-tennis.dk, mrk. Mens Club, også selvom sæsonen er i gang. <br />
+        Husk man SKAL være aktivt medlem af tennishallen for at deltage.
+      </p>
+
+      <!-- Border under entire accordion content -->
+      <div class="</MainLayout">
+        <!-- JAVASCRIPT -->
+        <script>
+          const triggers = document.querySelectorAll(".accordion-trigger");
+
+          triggers.forEach((trigger) => {
+            trigger.addEventListener("click", () => {
+              const panel = trigger.nextElementSibling.nextElementSibling;
+              const img = trigger.querySelector("img");
+
+              panel.classList.toggle("hidden");
+              img.classList.toggle("rotate-180");
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </div></MainLayout
+>
