@@ -17,8 +17,8 @@ import thumbsup from "../assets/images/thumbsup.png";
   <!-- Herosection -->
   <section class="hero h-screen w-full relative">
     <div class="relative w-screen h-screen">
-      <img src="/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
-      <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
+      <img src="/mensclubinde.png" alt="Full Screen Image" class="object-cover w-full h-full" />
+      <div class="absolute inset-0 flex bg-base-400/60 flex-col items-center justify-start pt-20 gap-4">
         <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg anton-regular">Mens club inde</h2>
         <div class="flex gap-4">
           <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer montserrat-700 font-bold">Book Tennis bane</button>
@@ -38,7 +38,15 @@ import thumbsup from "../assets/images/thumbsup.png";
       <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Yderligere information</h2>
       <p class="text-primary-content leading-relaxed arial">Spørgsmål omkring Mens Club bedes rettes til:</p>
       <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Sportschef</h2>
-      <p class="text-primary-content leading-relaxed arial">Thomas Skouboe <br /> 20 87 77 81 <br />thomas@kfum-tennis.dk</p>
+      <div class="flex items-center gap-20">
+        <p class="text-primary-content leading-relaxed arial">
+          Thomas Skouboe <br />
+          20 87 77 81 <br />
+          thomas@kfum-tennis.dk
+        </p>
+
+        <img src="/sportschef.png" alt="Sportschef" class="w-32 h-auto rounded-lg" />
+      </div>
     </div>
   </section>
 
@@ -104,25 +112,27 @@ import thumbsup from "../assets/images/thumbsup.png";
 
   <!-- ACCORDION 4 -->
   <div class="accordion-group w-full max-w-3xl mx-auto mb-6">
-    <!-- Accordion header -->
+    <!-- Accordion trigger -->
     <div class="accordion-trigger flex items-center justify-between bg-base-100 p-4 cursor-pointer">
       <span class="montserrat-700">Program:</span>
-      <img src="/pil.png" class="w-6 h-6 transition-transform duration-300" />
+      <img src="/pil.png" class="arrow w-6 h-6 transition-transform duration-300" />
     </div>
 
-    <!-- Border line under header -->
+    <!-- Border under header -->
     <div class="w-full border-b border-primary-content"></div>
 
-    <!-- Accordion panel -->
-    <p class="leading-relaxed text-primary-content mb-4 arial">
-      <a href="https://docs.google.com/spreadsheets/d/1AbFO8hTW8QbmRNlpFFW3gGGt2n8o5IGYUz_PLOmA41I/edit?gid=796099703#gid=796099703" class="underline hover:text-base-300 block"> Mens Club Termin 01 </a>
+    <!-- Accordion content -->
+    <div class="accordion-panel bg-base-100 p-4 hidden">
+      <p class="leading-relaxed text-primary-content mb-2 arial">
+        <a href="https://docs.google.com/spreadsheets/d/1AbFO8hTW8QbmRNlpFFW3gGGt2n8o5IGYUz_PLOmA41I/edit?gid=796099703#gid=796099703" class="underline hover:text-base-300 block"> Mens Club Termin 01 </a>
 
-      <a href="" class="underline hover:text-base-300 block"> Mens Club Termin 02 </a>
+        <a href="" class="underline hover:text-base-300 block"> Mens Club Termin 02 </a>
 
-      <a href="https://usercontent.one/wp/www.kfum-tennis.dk/wp-content/uploads/2023/09/Opvarmning2023.pdf?media=1764238159" class="underline hover:text-base-300 block"> Opvarmningsprogram </a>
-    </p>
+        <a href="https://usercontent.one/wp/www.kfum-tennis.dk/wp-content/uploads/2023/09/Opvarmning2023.pdf?media=1764238159" class="underline hover:text-base-300 block"> Opvarmningsprogram </a>
+      </p>
+    </div>
 
-    <!-- Border under content -->
+    <!-- Border under whole accordion -->
     <div class="w-full border-b border-primary-content"></div>
   </div>
   <!-- ACCORDION 5 -->
@@ -133,11 +143,11 @@ import thumbsup from "../assets/images/thumbsup.png";
       <img src="/pil.png" class="arrow w-6 h-6 transition-transform duration-300" />
     </div>
 
-    <!-- Bottom border under header -->
+    <!-- Border under header -->
     <div class="w-full border-b border-primary-content"></div>
 
-    <!-- Hidden accordion content wrapper -->
-    <div class="accordion-panel hidden">
+    <!-- Accordion content -->
+    <div class="accordion-panel bg-base-100 p-4 hidden">
       <p class="leading-relaxed text-primary-content mb-2 arial">
         <a href="https://docs.google.com/forms/d/1Ni6V3jhAJ1htNPAOITBvW-qsOu77C2bWwFUvu58WExY/viewform?edit_requested=true" class="underline hover:text-base-300 block"> Tilmelding via Mens Club tilmelding Googleark </a>
       </p>
@@ -149,24 +159,53 @@ import thumbsup from "../assets/images/thumbsup.png";
         Send din tilmelding til: thomas@kfum-tennis.dk, mrk. Mens Club, også selvom sæsonen er i gang. <br />
         Husk man SKAL være aktivt medlem af tennishallen for at deltage.
       </p>
-
-      <!-- Border under entire accordion content -->
-      <div class="</MainLayout">
-        <!-- JAVASCRIPT -->
-        <script>
-          const triggers = document.querySelectorAll(".accordion-trigger");
-
-          triggers.forEach((trigger) => {
-            trigger.addEventListener("click", () => {
-              const panel = trigger.nextElementSibling.nextElementSibling;
-              const img = trigger.querySelector("img");
-
-              panel.classList.toggle("hidden");
-              img.classList.toggle("rotate-180");
-            });
-          });
-        </script>
-      </div>
     </div>
-  </div></MainLayout
->
+
+    <!-- Border under whole accordion -->
+    <div class="w-full border-b border-primary-content"></div>
+  </div>
+
+  <!-- ACCORDION 3 -->
+  <div class="accordion-group w-full max-w-3xl mx-auto mb-6">
+    <!-- Accordion header -->
+    <div class="accordion-trigger flex items-center justify-between bg-base-100 p-4 cursor-pointer">
+      <span class="montserrat-700">Pris:</span>
+      <img src="/pil.png" class="w-6 h-6 transition-transform duration-300" />
+    </div>
+
+    <!-- Border line under header -->
+    <div class="w-full border-b border-primary-content"></div>
+
+    <!-- Accordion panel -->
+    <div class="accordion-panel bg-base-100 p-4 hidden">
+      <p class="leading-relaxed text-primary-content mb-4 arial"><br /> Kr. 1.500,00 pr. termin. <br /> Efter tilmeldingen, vil der komme informationer omkring betaling.</p>
+    </div>
+
+    <!-- Border under content -->
+    <div class="w-full border-b border-primary-content"></div>
+  </div>
+
+  <!-- Vinterens tilbud -->
+  <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('/public/tennisbanebg.jpg')">
+    <div class="absolute inset-0"></div>
+    <div class="relative z-10 max-w-4xl mx-auto p-8 text-center text-primary-content">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 montserrat-700">Vinterens tilbud</h2>
+      <p class="mb-6 text-primary-content leading-relaxed arial">Tag et kig på vores omfangsrige folder</p>
+      <a href="https://issuu.com/kfumtennisklub/docs/tr_nings_og_aktivitetskatalog_for_f_rste_termin_20">
+        <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer leading-relaxed arial">Læs mere om tilbuddet</button>
+      </a>
+    </div>
+  </section>
+</MainLayout>
+
+<script>
+  document.querySelectorAll(".accordion-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const panel = trigger.nextElementSibling.nextElementSibling;
+      const arrow = trigger.querySelector("img");
+
+      panel.classList.toggle("hidden");
+      arrow.classList.toggle("rotate-180");
+    });
+  });
+</script>
