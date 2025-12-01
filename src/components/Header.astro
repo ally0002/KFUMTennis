@@ -1,38 +1,40 @@
-<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-base-200/60">
-  <header id="navbar" class="flex flex-row justify-between items-center">
+<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-base-200/60 z-50">
+  <header class="flex justify-between items-center">
     <div id="logo">
       <a href="/">
-        <img class="w-20" src="/Logo.png" alt="Skraldespand Logo" />
+        <img src="/Logo.png" alt="Logo" class="w-20" />
       </a>
     </div>
 
-    <nav id="desktopmenu" class="hidden lg:block text-base-100 p-4">
-      <ul class="flex flex-row gap-6 font-bold text-lg lg:text-xl">
-        <li><a href="/omkfum" class="hover:text-base-300">KFUM</a></li>
-        <li><a href="/holdoversigt" class="hover:text-base-300">Træning</a></li>
-        <li><a href="#klubaktiviteter" class="hover:text-base-300">Klub Aktiviteter</a></li>
-        <li><a href="#padel" class="hover:text-base-300">Padel</a></li>
-        <li><a href="#kontakt" class="hover:text-base-300">Kontakt</a></li>
-        <li><a href="#english" class="hover:text-base-300">English</a></li>
+    <!-- Desktop Menu -->
+    <nav class="hidden lg:block">
+      <ul class="flex gap-6 font-bold text-lg">
+        <li><a href="/omkfum" class="hover:text-base-300 text-base-100">KFUM</a></li>
+        <li><a href="/holdoversigt" class="hover:text-base-300 text-base-100">Træning</a></li>
+        <li><a href="#klubaktiviteter" class="hover:text-base-300 text-base-100">Klub Aktiviteter</a></li>
+        <li><a href="#padel" class="hover:text-base-300 text-base-100">Padel</a></li>
+        <li><a href="#kontakt" class="hover:text-base-300 text-base-100">Kontakt</a></li>
+        <li><a href="#english" class="hover:text-base-300 text-base-100">English</a></li>
       </ul>
     </nav>
 
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu" aria-expanded="showmenu" aria-label="Åbn mobilmenu">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <!-- Hamburger -->
+    <button class="lg:hidden" x-on:click="showmenu = !showmenu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
       </svg>
     </button>
   </header>
 
   <!-- Mobile Menu -->
-  <nav id="mobilmenu" class="flex flex-col content-center pt-4 mb-20 bg-base-200/60" x-show="showmenu" x-transition x-on:click.outside="showmenu = false">
+  <nav x-show="showmenu" x-transition x-on:click.outside="showmenu = false" class="absolute top-full left-0 w-full bg-base-200/90 flex flex-col items-center pt-4 z-50">
     <ul class="text-center font-bold pb-10 space-y-4">
-      <li><a href="/omkfum" class="hover:text-base-300">KFUM</a></li>
-      <li><a href="#træning" class="hover:text-base-300">Træning</a></li>
-      <li><a href="#klubaktiviteter" class="hover:text-base-300">Klub Aktiviteter</a></li>
-      <li><a href="#padel" class="hover:text-base-300">Padel</a></li>
-      <li><a href="#kontakt" class="hover:text-base-300">Kontakt</a></li>
-      <li><a href="#english" class="hover:text-base-300">English</a></li>
+      <li><a href="/omkfum" class="hover:text-base-300 text-base-100">KFUM</a></li>
+      <li><a href="#træning" class="hover:text-base-300 text-base-100">Træning</a></li>
+      <li><a href="#klubaktiviteter" class="hover:text-base-300 text-base-100">Klub Aktiviteter</a></li>
+      <li><a href="#padel" class="hover:text-base-300 text-base-100">Padel</a></li>
+      <li><a href="#kontakt" class="hover:text-base-300 text-base-100">Kontakt</a></li>
+      <li><a href="#english" class="hover:text-base-300 text-base-100">English</a></li>
     </ul>
   </nav>
 </div>

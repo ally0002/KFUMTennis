@@ -17,22 +17,38 @@ import Accordiontennissportensdag from "../components/Accordiontennissportensdag
 
 <MainLayout title="Titel" data-theme:tennis>
   <!-- Herosection -->
-  <section class="hero h-screen w-full relative">
-    <div class="relative w-screen h-screen">
+  <section class="hero w-full relative h-64 md:h-screen">
+    <div class="relative w-full h-full">
       <img src="/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
+
       <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
-        <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg anton-regular">Bliv en del af fællesskabet</h2>
-        <h2 class="text-primary-conten text-3xl font-bold drop-shadow-lg anton-regular">Tennis for alle</h2>
-        <div class="flex gap-4">
-          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer montserrat-700 font-bold">Book Tennis bane</button>
-          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer montserrat-700 font-bold">Book Padel bane</button>
+        <!-- Top centered heading on desktop, full centered on mobile -->
+        <h2 class="text-primary-content
+      !text-4xl md:!text-8xl
+      font-bold drop-shadow-lg anton-regular
+      text-center
+      md:self-start md:pl-20">Bliv en del af fællesskabet</h2>
+
+        <!-- Under it, centered on mobile, left on desktop -->
+        <h2 class="text-primary-content
+      !text-4xl md:!text-8xl
+      font-bold drop-shadow-lg anton-regular
+      text-center
+      md:self-start md:pl-20">Tennis for alle</h2>
+
+        <!-- Buttons: closer on mobile, same on desktop -->
+        <div class="flex gap-10 mt-4 <!-- MOBILE spacing -->
+      md:gap-50 md:mt-65 <!-- DESKTOP spacing -->">
+          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer montserrat-700 font-bold"> Book Tennis bane </button>
+          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer montserrat-700 font-bold"> Book Padel bane </button>
         </div>
       </div>
-      <div class="absolute top-40 right-0 md:w-1/2" id="herovideo">
-        <video width="1080" height="960" autoplay muted loop class="rounded-[30px] border-primary-content">
-          <source src="pierre-falcke-video-kopi.mp4" type="video/mp4" />
-        </video>
-      </div>
+    </div>
+
+    <div class="hidden md:block absolute top-50 right-20 md:w-2/5" id="herovideo">
+      <video width="1080" height="960" autoplay muted loop class="rounded-[30px] border-primary-content">
+        <source src="pierre-falcke-video-kopi.mp4" type="video/mp4" />
+      </video>
     </div>
   </section>
   <!-- Prisliste -->
@@ -119,10 +135,21 @@ import Accordiontennissportensdag from "../components/Accordiontennissportensdag
         <h2 class="montserrat-700 text-2xl md:text-3xl font-bold">Følg den daglige opdatering her!</h2>
 
         <div class="flex flex-row h-50 bg-base-100 p-20 rounded-lg border border-primary-content space-x-30">
-          <img src="/Facebook.png" alt="SOME" class="w-12 h-12" />
-          <img src="/Instagram.png" alt="SOME" class="w-12 h-12" />
-          <img src="/twitter.png" alt="SOME" class="w-12 h-12" />
-          <img src="/youtube.png" alt="SOME" class="w-12 h-12" />
+          <a href="https://www.facebook.com/KFUMtennis" target="_blank" rel="noopener noreferrer">
+            <img src="/Facebook.png" alt="Facebook" class="w-12 h-12" />
+          </a>
+
+          <a href="https://www.instagram.com/KFUMTENNIS/" target="_blank" rel="noopener noreferrer">
+            <img src="/Instagram.png" alt="Instagram" class="w-12 h-12" />
+          </a>
+
+          <a href="https://x.com/kfumtenniskbh" target="_blank" rel="noopener noreferrer">
+            <img src="/twitter.png" alt="Twitter" class="w-12 h-12" />
+          </a>
+
+          <a href="https://www.youtube.com/channel/UCkWsnhJvu7A0S11zxhXHGZg" target="_blank" rel="noopener noreferrer">
+            <img src="/youtube.png" alt="YouTube" class="w-12 h-12" />
+          </a>
         </div>
       </div>
     </section>
@@ -191,7 +218,7 @@ import Accordiontennissportensdag from "../components/Accordiontennissportensdag
       </div>
     </section>
     <!-- Tennissportens dag -->
-   
+
     <Accordiontennissportensdag />
     <!-- Vinterens tilbud -->
     <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden border border-primary-content rounded-lg pt-15" style="background-image: url('/public/tennisbanebg.jpg')">
