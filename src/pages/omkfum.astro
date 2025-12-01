@@ -14,15 +14,16 @@ import { Image } from "astro:assets";
 
 <MainLayout title="Titel" data-theme:tennis>
   <!-- Hero Section -->
-  <section class="hero h-screen w-full relative">
+  <section class="hero w-full relative flex justify-center items-center bg-base-300/40" style="height: 400px;">
     <!-- Video baggrund -->
-    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+    <video autoplay muted loop class="z-0 max-h-full w-auto object-contain">
       <source src="teninissportensdag.mp4" type="video/mp4" />
     </video>
 
     <!-- Overlay med knapper -->
-    <div class="absolute inset-0  z-10 flex flex-col items-center justify-center gap-4">
-      <div class="flex gap-4">
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4">
+      <div class="hidden md:flex gap-80">
+        <!-- hidden on mobile, flex on md+ -->
         <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer"> Book Tennis bane </button>
         <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer"> Book Padel bane </button>
       </div>
@@ -49,12 +50,13 @@ import { Image } from "astro:assets";
     </div>
   </section>
   <!-- KORT -->
-  <section class="w-screen bg-base-300/40 flex items-start justify-center py-16 lg:p-[200px]">
-    <div class="flex flex-col items-center">
-      <img src="/kortoverkfum.jpg" alt="billede" class="px-[92px]" />
-      <p class="mt-4">Kort over KFUM Tennis anlæg</p>
+  <section class="w-screen bg-base-300/40 flex items-start justify-center lg:p-20px">
+    <div class="overflow-hidden rounded-[30px]">
+      <img src="/kortoverkfum.png" alt="billede" class="w-full rounded-[30px] border border-primary-content" />
+      <p class="mt-4 text-right pr-4">Kort over KFUM Tennis anlæg</p>
     </div>
   </section>
+
   <!-- Vinterens tilbud -->
   <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden bg-base-300/40" style="">
     <div class="absolute inset-0"></div>
@@ -67,5 +69,3 @@ import { Image } from "astro:assets";
     </div>
   </section>
 </MainLayout>
-
-
