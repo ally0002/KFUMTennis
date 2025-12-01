@@ -6,6 +6,7 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import Accordionpriser from "../components/Accordionpriser.astro";
 import Accordiontennissportensdag from "../components/Accordiontennissportensdag.astro";
+import Holdoversigt from "../components/Holdoversigt.astro";
 ---
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -153,57 +154,9 @@ import Accordiontennissportensdag from "../components/Accordiontennissportensdag
     </section>
 
     <!-- Holdinformation: 2 rows x 5 columns grid -->
-    <section class="max-w-5xl mx-auto grid grid-cols-5 grid-rows-2 gap-4 my-8 bg-base-300/60">
-      <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-        <img src="/Ladiesinde.png" alt="Ladies" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
-      </div>
+    <h2 class="montserrat-700 text-2xl md:text-3xl font-bold text-center pt-15">Hold-information</h2>
+    <Holdoversigt/>
 
-      <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-        <img src="/u25inde.png" alt="U25" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
-      </div>
-
-      <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-        <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
-      </div>
-
-      <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-        <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
-      </div>
-
-      <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-        <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
-      </div>
-
-      <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-        <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
-      </div>
-
-      <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-        <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
-      </div>
-
-      <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-        <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
-      </div>
-
-      <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-        <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
-      </div>
-
-      <div class="relative w-full h-48 overflow-hidden group rounded-[30px]">
-        <img src="/vokseinde.png" alt="Voksne" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-[#981b00] opacity-0 group-hover:opacity-40 transition duration-300 rounded-[30px]"></div>
-      </div>
-    </section>
     <!-- Nyheder -->
     <section class="relative h-64 md:h-96 w-full bg-cover bg-center bg-no-repeat overflow-hidden border border-primary-content rounded-lg pt-15" style="background-image: url('/public/tennisbanebg.jpg')">
       <div class="absolute inset-0"></div>
