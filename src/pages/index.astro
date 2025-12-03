@@ -7,6 +7,8 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Accordionpriser from "../components/Accordionpriser.astro";
 import Accordiontennissportensdag from "../components/Accordiontennissportensdag.astro";
 import Holdoversigt from "../components/Holdoversigt.astro";
+import Video from "../components/Video.astro";
+
 ---
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,41 +19,8 @@ import Holdoversigt from "../components/Holdoversigt.astro";
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
 
 <MainLayout title="Titel" data-theme:tennis>
-  <!-- Herosection -->
-  <section class="hero w-full relative h-64 md:h-screen">
-    <div class="relative w-full h-full">
-      <img src="/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-full" />
-
-      <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
-        <!-- Top centered heading on desktop, full centered on mobile -->
-        <h2 class="text-primary-content
-      !text-4xl md:!text-8xl
-      font-bold drop-shadow-lg anton-regular
-      text-center
-      md:self-start md:pl-20">Bliv en del af fællesskabet</h2>
-
-        <!-- Under it, centered on mobile, left on desktop -->
-        <h2 class="text-primary-content
-      !text-4xl md:!text-8xl
-      font-bold drop-shadow-lg anton-regular
-      text-center
-      md:self-start md:pl-20">Tennis for alle</h2>
-
-        <!-- Buttons: closer on mobile, same on desktop -->
-        <div class="flex gap-10 mt-4 <!-- MOBILE spacing -->
-      md:gap-50 md:mt-65 <!-- DESKTOP spacing -->">
-          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer montserrat-700 font-bold"> Book Tennis bane </button>
-          <button class="px-8 py-4 bg-info text-primary-content border-0 rounded-tl-[300px] rounded-br-[300px] cursor-pointer montserrat-700 font-bold"> Book Padel bane </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="hidden md:block absolute top-50 right-20 md:w-2/5" id="herovideo">
-      <video width="1080" height="960" autoplay muted loop class="rounded-[30px] border-primary-content">
-        <source src="pierre-falcke-video-kopi.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </section>
+  <Video />
+  
   <!-- Prisliste -->
   <section class="gap-4 bg-base-300/40">
     <h2 class="montserrat-700 text-2xl md:text-3xl font-bold text-center pb-10 pt-30">Priser</h2>
