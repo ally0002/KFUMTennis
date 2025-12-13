@@ -8,7 +8,6 @@ import Accordionpriser from "../components/Accordionpriser.astro";
 import Accordiontennissportensdag from "../components/Accordiontennissportensdag.astro";
 import Holdoversigt from "../components/Holdoversigt.astro";
 import Video from "../components/Video.astro";
-
 ---
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,12 +19,13 @@ import Video from "../components/Video.astro";
 
 <MainLayout title="Titel" data-theme:tennis>
   <Video />
-  
+
   <!-- Prisliste -->
   <section class="gap-4 bg-base-300/40">
     <h2 class="montserrat-700 text-2xl md:text-3xl font-bold text-center pb-10 pt-30">Priser</h2>
-    <p class="text-primary-content leading-relaxed arial text-center pb-10">KONTINGENT 2025 <br />Kontingent betales inden 28.februar 2025 og dækker 2025-sæsonen (1.januar – 31.december 2025).</p>
-    <h4 class="text-center montserrat-700 font-extralight text-sm md:text-2xl responsive-word-spacing">KATEGORI ALDER KONTIGENT STARTGEBYR RETTIGHEDER</h4>
+    <p class="text-primary-content leading-relaxed text-center pb-10 font-bold">KONTINGENT 2025 <br />
+      Kontingent betales inden 28.februar 2025 og dækker 2025-sæsonen (1.januar – 31.december 2025).</p>
+    <h4 class="text-center montserrat-700 font-extralight text-sm md:text-2xl responsive-word-spacing">KATEGORI ALDER KONTINGENT STARTGEBYR RETTIGHEDER</h4>
 
     <section class="my-8">
       <div class="grid grid-rows-10 grid-cols-5 gap-0 p-0 bg-base-100 rounded-[30px] max-w-5xl mx-auto border border-primary-content">
@@ -99,31 +99,30 @@ import Video from "../components/Video.astro";
       <Accordionpriser />
     </section>
 
-    <!-- SOME -->
-    <section class="w-screen bg-base-400/60 flex flex-col items-center justify-center rounded-lg border border-primary-content py-10 md:py-20">
+    <section class="w-full bg-base-400 flex flex-col items-center justify-center rounded-lg  py-10 md:py-20">
       <h2 class="montserrat-700 text-2xl md:text-3xl font-bold text-center pb-6 md:pb-10">Følg den daglige opdatering her!</h2>
 
       <div class="flex flex-row bg-base-100 p-4 md:p-12 rounded-lg border border-primary-content justify-center space-x-6 md:space-x-10">
-        <a href="https://www.facebook.com/KFUMtennis" target="_blank" rel="noopener noreferrer">
-          <img src="/Facebook.png" alt="Facebook" class="w-6 h-6 md:w-12 md:h-12" />
+        <a href="https://www.facebook.com/KFUMtennis" target="_blank" rel="noopener noreferrer" aria-label="KFUM Tennis på Facebook" class="transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary rounded">
+          <img src="/Facebook.png" alt="Facebook" loading="lazy" class="w-6 h-6 md:w-12 md:h-12" />
         </a>
 
-        <a href="https://www.instagram.com/KFUMTENNIS/" target="_blank" rel="noopener noreferrer">
-          <img src="/Instagram.png" alt="Instagram" class="w-6 h-6 md:w-12 md:h-12" />
+        <a href="https://www.instagram.com/KFUMTENNIS/" target="_blank" rel="noopener noreferrer" aria-label="KFUM Tennis på Instagram" class="transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary rounded">
+          <img src="/Instagram.png" alt="Instagram" loading="lazy" class="w-6 h-6 md:w-12 md:h-12" />
         </a>
 
-        <a href="https://x.com/kfumtenniskbh" target="_blank" rel="noopener noreferrer">
-          <img src="/twitter.png" alt="Twitter" class="w-6 h-6 md:w-12 md:h-12" />
+        <a href="https://x.com/kfumtenniskbh" target="_blank" rel="noopener noreferrer" aria-label="KFUM Tennis på X" class="transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary rounded">
+          <img src="/twitter.png" alt="X (Twitter)" loading="lazy" class="w-6 h-6 md:w-12 md:h-12" />
         </a>
 
-        <a href="https://www.youtube.com/channel/UCkWsnhJvu7A0S11zxhXHGZg" target="_blank" rel="noopener noreferrer">
-          <img src="/youtube.png" alt="YouTube" class="w-6 h-6 md:w-12 md:h-12" />
+        <a href="https://www.youtube.com/channel/UCkWsnhJvu7A0S11zxhXHGZg" target="_blank" rel="noopener noreferrer" aria-label="KFUM Tennis på YouTube" class="transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary rounded">
+          <img src="/youtube.png" alt="YouTube" loading="lazy" class="w-6 h-6 md:w-12 md:h-12" />
         </a>
       </div>
     </section>
 
     <!-- Holdinformation: 2 rows x 5 columns grid -->
-    <h2 class="montserrat-700 text-2xl md:text-3xl font-bold text-center pt-15">Hold-information</h2>
+    <h2 class="montserrat-700 text-2xl md:text-3xl font-bold text-center pt-30">Hold-information</h2>
     <Holdoversigt />
 
     <!-- Nyheder -->
