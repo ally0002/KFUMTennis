@@ -15,47 +15,30 @@ import Nyhederfilter from "../components/Nyhederfilter.astro";
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
 
 <MainLayout title="Titel" data-theme:tennis>
-  <!-- Herosection -->
-  <section class="hero h-100 w-full relative ">
-    <div class="relative w-screen h-screen">
-      <img src="/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-100" />
-      <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
-        <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg anton-regular">Nyheder</h2>
-      </div>
-    </div>
-  </section>
-  <section class="w-full max-w-5xl mx-auto p-8 relative z-10 bg-base-300/60">
-    <!-- Content Items -->
-    <div class="grid grid-cols-1 gap-6 bg-base-300/60">
-      <!-- ITEM 1 -->
-      <div class="filter-item bg-base-100 border border-primary-content p-6 rounded-lg" data-category="bestyrelsen">
-        <div class="flex flex-col md:flex-row justify-between">
-          <h3 class="montserrat-700 font-bold text-xl mb-2 md:mb-0 pb-5">Budget- og kontingentmøde for 2026</h3>
-          <p class="text-xs mt-2 md:mt-0 md:ml-4">BESTYRELSEN</p>
+  <div class="bg-base-300/60 min-h-screen w-full">
+    <!-- Herosection -->
+    <section class="hero h-100 w-full relative">
+      <div class="relative w-screen h-screen">
+        <img src="/herosection.jpg" alt="Full Screen Image" class="object-cover w-full h-100" />
+        <div class="absolute inset-0 flex flex-col items-center justify-start pt-20 gap-4">
+          <h2 class="text-primary-content text-3xl font-bold drop-shadow-lg anton-regular">Nyheder</h2>
         </div>
-        <p class="text-primary-content arial mb-4 pb-20">Hermed indkaldes til Budget- og kontingentmøde for sæson 2026. KFUM Tennis indkalder hermed til budget- og kontingentmøde onsdag den 26. november 2025 kl. 19.00 i ”Huset”, Nøkkerosevej 25, 2400 København NV. Dagsorden: 1.    Valg af dirigent og referent. 2.    Fremlæggelse af forslag til budget for 2026 – se vedlagte budgetforslag. 3.    Fastlæggelse af kontingent for 2026. Bestyrelsen foreslår forenkling af kontingentstrukturen samt forhøjelse af satserne begrundet i uændrede satser siden 2022 samt forventet godkendelse og finansiering af nyt klubhus. 4.    Eventuelt. Forslag til ændring af kontingentsatser*:</p>
-        <img src="/nyhedertabel.png" alt="billede" />
-        <p class="text-primary-content arial mb-4 pb-20 pt-20">* Kontingenterne foreslås hævet i intervallet 7-14 procent. Passivt medlemskab er uændret. Ungdomskontingenterne foreslås desuden harmoniseret. Ved sidste kontingentforhøjelse i 2022 (den første siden 2016) blev juniorer kun hævet 10%, mens seniorer blev hævet 25%. Begrundelserne for en kontingentstigning er især: Kontingenterne har ikke været justeret siden 2022, mens klubbens udgifter og lønningerne er steget på niveau med det omgivende samfund. Vi forventer at kunne bygge klubhus i 2026. Bestyrelsen ønsker desuden over de næste år at fortsætte med at investere i lys på grusbaner, udendørs helårsbaner samt en styrket trænerstab for yderligere at forbedre udbuddet af træning. Bilag:IndkaldelseBudgetforslag 2026</p>
       </div>
+    </section>
 
-      <script>
-        const buttons = document.querySelectorAll(".filter-btn");
-        const items = document.querySelectorAll(".filter-item");
-
-        buttons.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const filter = btn.getAttribute("data-filter");
-
-            items.forEach((item) => {
-              item.style.display = filter === "alle" || item.getAttribute("data-category") === filter ? "block" : "none";
-            });
-
-            // Highlight active button
-            buttons.forEach((b) => b.classList.remove("bg-primary-content", "text-base-100"));
-            btn.classList.add("bg-primary-content", "text-base-100");
-          });
-        });
-      </script>
-    </div>
-  </section>
-  </MainLayout/>
+    <!-- Nyhedssektion -->
+    <section class="w-full max-w-5xl mx-auto p-8 relative z-10">
+      <div class="grid grid-cols-1 gap-6">
+        <div class="filter-item bg-base-100 border border-primary-content p-6 rounded-lg" data-category="bestyrelsen">
+          <div class="flex flex-col md:flex-row justify-between">
+            <h3 class="montserrat-700 font-bold text-xl mb-2 md:mb-0 pb-5">Budget- og kontingentmøde for 2026</h3>
+            <p class="text-xs mt-2 md:mt-0 md:ml-4">BESTYRELSEN</p>
+          </div>
+          <p class="text-primary-content arial mb-4 pb-20">Hermed indkaldes til Budget- og kontingentmøde for sæson 2026. KFUM Tennis indkalder hermed til budget- og kontingentmøde onsdag den 26. november 2025 kl. 19.00 i ”Huset”, Nøkkerosevej 25, 2400 København NV. Dagsorden: 1.    Valg af dirigent og referent. 2.    Fremlæggelse af forslag til budget for 2026 – se vedlagte budgetforslag. 3.    Fastlæggelse af kontingent for 2026. Bestyrelsen foreslår forenkling af kontingentstrukturen samt forhøjelse af satserne begrundet i uændrede satser siden 2022 samt forventet godkendelse og finansiering af nyt klubhus. 4.    Eventuelt. Forslag til ændring af kontingentsatser*:</p>
+          <img src="/nyhedertabel.png" alt="billede" />
+          <p class="text-primary-content arial mb-4 pb-20 pt-20">* Kontingenterne foreslås hævet i intervallet 7-14 procent. Passivt medlemskab er uændret. Ungdomskontingenterne foreslås desuden harmoniseret. Ved sidste kontingentforhøjelse i 2022 (den første siden 2016) blev juniorer kun hævet 10%, mens seniorer blev hævet 25%. Begrundelserne for en kontingentstigning er især: Kontingenterne har ikke været justeret siden 2022, mens klubbens udgifter og lønningerne er steget på niveau med det omgivende samfund. Vi forventer at kunne bygge klubhus i 2026. Bestyrelsen ønsker desuden over de næste år at fortsætte med at investere i lys på grusbaner, udendørs helårsbaner samt en styrket trænerstab for yderligere at forbedre udbuddet af træning. Bilag:IndkaldelseBudgetforslag 2026</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</MainLayout>
